@@ -8,7 +8,7 @@ It is important to make the implementation **generic**, meaning that the `class 
 Implementation
 --------------
 
-1. **[Linked list](https://en.wikipedia.org/wiki/Linked_list)**: each element is defined by the data and a reference to the next element in the stack. The single operation used when adding a new element is slow but it does not require to adjust the dimension of the stack. This implementation can be selected if there is a stream of data coming and loosing some packets has an high cost. In Python the linked list is not represented by any in-built data structure. The Python list object is an array of references which store a reference to an object in each position of the list.
+1. **[Linked list](https://en.wikipedia.org/wiki/Linked_list)**: each element is defined by the data and a reference to the next element in the stack. The single operation used when adding a new element is slow but it does not require to adjust the dimension of the stack. Moreover returning an item from a linked list takes linear time, because it is necessary to iterate on all the elements one after the other. This implementation can be selected if there is a stream of data coming and loosing some packets has an high cost. In Python the linked list is not represented by any in-built data structure. The Python list object is an array of references which store a reference to an object in each position of the list.
 
 2. **Static array**: using an array is another way to implement a stack. The static implementation has a maximum capacity declared when the stack is created. It is necessary to monitor the size of the array because if the maximum capacity exceeds a [stack overflow](https://en.wikipedia.org/wiki/Stack_buffer_overflow) can occur.
 
@@ -21,6 +21,13 @@ Methods
 - *pop()*: it determines if two elements are in the same set.
 - *isEmpty()*: returns True if the stack is empty.
 - *resize()*: used only in the *resizing array* implementation.
+
+Applications:
+--------------
+
+- Dijkstra's (or Shunting-yard) two stack algorithm for computing arithmetic operations [[link]](https://en.wikipedia.org/wiki/Shunting-yard_algorithm)
+
+- DO/UNDO operations are done accumulating everything in a stack.
 
 
 Material
