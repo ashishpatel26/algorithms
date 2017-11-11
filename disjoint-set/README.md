@@ -15,10 +15,10 @@ Implementation
 Methods
 --------
 
-- *find()*: it returns the identifier of a given set.
-- *union()*: it merges two components and decrement the set counter.
-- *connected()*: it determines if two elements are in the same set.
-- *count()*: it retunrs the number of current sets.
+- `find()`: it returns the identifier of a given set.
+- `union()`: it merges two components and decrement the set counter.
+- `connected()`: it determines if two elements are in the same set.
+- `count()`: it retunrs the number of current sets.
 
 Material
 --------

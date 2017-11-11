@@ -12,9 +12,9 @@ Implementation
 Methods
 --------
 
-- *enqueue()*: it adds an element in the queue tail.
-- *dequeue()*: it pop an element from the head.
-- *isEmpty()*: returns True if the stack is empty.
+- `enqueue()`: it adds an element in the queue tail.
+- `dequeue()`: it pop an element from the head.
+- `isEmpty()`: returns True if the stack is empty.
 
 
 Material
