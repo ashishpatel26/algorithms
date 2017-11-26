@@ -9,3 +9,7 @@ Collection of algorithms and data structures implemented in Python and C++. For 
 2. Stack abstract data structure [[link]](./stack)
 
 3. Queue abstract data structure [[link]](./queue)
+
+4. Mergesort sorting algorithm [[link]](./mergesort)
+
+5. Quicksort sorting algorithm [[link]](./quicksort)
