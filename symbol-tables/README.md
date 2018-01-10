@@ -1,5 +1,5 @@
 
-Definition: the [Symbol Table](https://en.wikipedia.org/wiki/Symbol_table) data structure associates a key to a value. They are also known as associative arrays, **maps**, or **dictionaries**. The client can insert key-value pair in the table and can later return the value using the key. 
+A [Symbol Table](https://en.wikipedia.org/wiki/Symbol_table) data structure associates a key to a value. They are also known as associative arrays, **maps**, or **dictionaries**. The client can insert key-value pair in the table and can later return the value using the key. 
 It is not possible to have **duplicated keys** because when a new element associated with an existing key is added, the old key is kept and the associated value is overwritten.
 
 Implementation
@@ -8,8 +8,6 @@ Implementation
 1. **Linked list**: The keys are stored in a sequence of linked nodes. To find the value associated to a key it is necessary to scan the list and comparing the input key with the current key (sequential search). The same mechanism is used for both `get()` and `put()`. In particular in the `put()` method it is necessary to scan the array looking for the key, if the key is found then it can be returned otherwise the input key is added at the head of the linked list referring to the next element. The main problem of this approach is the time complexity, that is O(N) for both `get()` and `put()`.
 
 2. **Ordered array:** using and ordered array for the keys to be stored, it is possible to use *binary search* for `get()`, reducing the time complexity to O(log N). Using an ordered array makes also extremelly fast to return the maximum and minimum keys (operations often used). Moreover it makes possible to manage particular keys, such as times and dates. The same problem remains for the method `put()` since to add a new element it is necessary to find the insertion point (it can be done with binary search) and then shift of one position all the elements that are greater than the key. In the worst case it will be necessary to shift all the keys (time complexity: O(N)). Those problems are solved using [binary search trees](https://en.wikipedia.org/wiki/Binary_search_tree), which are introduced in the next lesson.
-
-3. [Binary search trees](https://en.wikipedia.org/wiki/Binary_search_tree) (binary search). The main problem is with the deletion operation (Hibbard deletion) that is the only method used today. The Hibbard deletion unbalance the three leading to sqrt(N) height.
 
 
 Methods

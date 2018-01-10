@@ -1,10 +1,12 @@
 
-The [binary search trees](https://en.wikipedia.org/wiki/Binary_search_tree) are a particular [symbol table](https://en.wikipedia.org/wiki/Symbol_table) data structure that combines the flexibility of insertion in a linked list with the efficiency of search in an ordered array. Specifically, using two links per node (instead of the one link per node found in linked lists) leads to a very efficient implementation. In a binary search tree, each node also has a key and a value, with an ordering restriction to support efficient search.
+The [binary search trees](https://en.wikipedia.org/wiki/Binary_search_tree) are a particular type of [symbol tables](https://en.wikipedia.org/wiki/Symbol_table) data structure that combines the flexibility of insertion in a linked list with the efficiency of search in an ordered array. Specifically, using two links per node (instead of the one link per node found in linked lists) leads to a very efficient implementation. In a binary search tree each node has a key, a value, a left link, and a right link.
 
 <p align="center">
-<img src="./images/bst_example_tree.png" width="300">
+<img src="./images/bst_example_tree.png" width="400">
 </p>
 
+In the standard implementation the binary search tree has a node with lower key linked on the left, and the node with an higher key linked on the right.
+Differently from the [binary heap](https://en.wikipedia.org/wiki/Binary_heap) data structure studied in the priority queue module, the binary tree has a structure where a parent node can have a lower weight compared to the child. For example, in a binary heap the root must always be the largest element, this is not true for a binary tree. 
 
 Implementation
 --------------
