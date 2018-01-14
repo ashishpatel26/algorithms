@@ -2,7 +2,7 @@
 The [red-black](https://en.wikipedia.org/wiki/Red%E2%80%93black_tree) balanced search trees are a particular data structure used to solve the problem of unbalanced trees and to avoid the overhead of 2-3 balanced tree. Red-black trees are both 2-3 trees and standard binary trees. From standard trees they take the simplicity of the search method, whereas from the 2-3 trees they take the balanced insertion method. However, respect to standard trees the red-black trees do not get unbalanced if the key are inserted in increasing order, and they do not have all the problems we found in the 2-3 trees (e.g. there are not multiple node types and splitting cases). Comparing this data structure with the ones studied in previous modules we can see the advantages in term of complexity:
 
 <p align="center">
-<img src="./images/comparison_complexity.png" width="400">
+<img src="./images/comparison_complexity.png" width="500">
 </p>
 
 This data structure guarantees a **time complexity** of O(log N) in all the operations of search, insert, and delete. The **space complexity** is almost identical to a standard tree, because the only additional information required is the colour of the link, that can be stored in a single bit. 
@@ -10,7 +10,7 @@ This data structure guarantees a **time complexity** of O(log N) in all the oper
 We think of the links as being of two different types: **red links**, which bind together two 2-nodes to represent 3-nodes, and **black links** which bind together the 2-3 tree.
 
 <p align="center">
-<img src="./images/rbbst_3-node_to_two_2-nodes.png" width="300">
+<img src="./images/rbbst_3-node_to_two_2-nodes.png" width="250">
 </p>
 
 There are three main properties that must hold in order to have a red-black tree:
@@ -35,7 +35,7 @@ An additional Boolean property called `colour` can be added to the standard code
 The rotations and flipping operations are all used during the creation of the tree. Here we can see three cases:
 
 <p align="center">
-<img src="rbbst_insert_into_a_3-node.png" width="300">
+<img src="./images/rbbst_insert_into_a_3-node.png" width="300">
 </p>
 
 All the above operations are only used in the method `put()` and in the method `remove()`, the other methods are the same used in standard binary trees. In particular, it is important to notice that he `get()` method does not examine the node colour, so the balancing mechanism adds no overhead. Search is faster than in elementary binary trees because the tree is balanced.
