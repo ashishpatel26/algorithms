@@ -22,7 +22,7 @@ Collection of algorithms and data structures implemented in Python and C++. For 
 
 9. **Binary Search Trees**: (data structure) it is a smart implementation of symbol tables. It solves the problem given by the standard symbol table implementations, giving O(log N) time complexity for both `get()` and `put()`. [[link]](./binary-search-trees)
 
-10. **Balanced Search Trees**: (data structure) it solves the problem of unbalanced trees, given by . It is also known as [self-balancing binary search tree](https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree) 
+10. **Balanced Search Trees**: (data structure) it solves the problem of unbalanced trees, given by . It is also known as [self-balancing](https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree) binary search tree [[link]](./balanced-search-trees)
 
 11. **Red-Black Balanced Search Trees**: (data structure) TBD
 
