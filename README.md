@@ -26,7 +26,7 @@ Collection of algorithms and data structures implemented in Python and C++. For 
 
 11. **Red-Black Balanced Search Trees**: (data structure) it solves the overhead problem of standard balanced trees. The implementation guarantees O(log N) time complexity in all the operations. The resulting tree is not perfectly balanced in some particular cases [[link]](./red-black-balanced-search-trees)
 
-12. **Hash tables**: (data structure) TBD
+12. **Hash tables**: (data structure) using an hash function that maps any integer into a subset it is possible to store a large number of values into a limited number of bins [[link]](./hash-functions)
 
 Official requirements (of different companies) for passing coding interview:
 

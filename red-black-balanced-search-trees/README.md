@@ -7,7 +7,7 @@ The [red-black](https://en.wikipedia.org/wiki/Red%E2%80%93black_tree) balanced s
 
 This data structure guarantees a **time complexity** of O(log N) in all the operations of search, insert, and delete. The **space complexity** is almost identical to a standard tree, because the only additional information required is the colour of the link, that can be stored in a single bit. 
 
-We think of the links as being of two different types: **red links**, which bind together two 2-nodes to represent 3-nodes, and **black links** which bind together the 2-3 tree.
+We think of the links as being of two different types: **red links**, which bind together two 2-nodes to represent 3-nodes, and **black links** which bind together the 2-3 tree. In 2008, Sedgewick introduced a simpler version of the red–black tree called the left-leaning red–black tree by eliminating a previously unspecified degree of freedom in the implementation. In this implementation (the same discussed here) all red links must lean left except during inserts and deletes.
 
 <p align="center">
 <img src="./images/rbbst_3-node_to_two_2-nodes.png" width="250">
@@ -35,7 +35,7 @@ An additional Boolean property called `colour` can be added to the standard code
 The rotations and flipping operations are all used during the creation of the tree. Here we can see three cases:
 
 <p align="center">
-<img src="./images/rbbst_insert_into_a_3-node.png" width="300">
+<img src="./images/rbbst_insert_into_a_3-node.png" width="400">
 </p>
 
 All the above operations are only used in the method `put()` and in the method `remove()`, the other methods are the same used in standard binary trees. In particular, it is important to notice that he `get()` method does not examine the node colour, so the balancing mechanism adds no overhead. Search is faster than in elementary binary trees because the tree is balanced.
@@ -58,9 +58,8 @@ Methods
 Applications
 ------------
 
-1. Dictionaries: which is the application that also gives the name to the data structure (key=word, value=definition)
-2. Account management: it can be used to process transactions (key=account-id, value=transaction detail)
-3. Web search: find relevant pages based on keywords (key=keyword, value=web-pages)
+1. [computational geometry](https://en.wikipedia.org/wiki/Computational_geometry): many data structures used in computational geometry can be based on red–black trees.
+2. scheduler: the [Completely Fair Scheduler](https://en.wikipedia.org/wiki/Completely_Fair_Scheduler) used in current Linux kernels uses red–black trees. 
 
 Quiz
 -----
