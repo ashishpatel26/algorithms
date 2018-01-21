@@ -2,7 +2,7 @@
 The [depth-first search](https://en.wikipedia.org/wiki/Depth-first_search) is an algorithm for **searching** or for traversing a graph. It is possible to understand how the algorithm works using the maze example. Let's suppose that a maze can be represented with nodes (intersection points) and edges (paths between nodes), as follows:
 
 <p align="center">
-<img src="./images/dfs_maze_definition.png" width="350">
+<img src="./images/dfs_maze_definition.png" width="450">
 </p>
 
 The [Trémaux's algorithm](https://en.wikipedia.org/wiki/Maze_solving_algorithm) can be used to find the exit. This algorithm is similar to the one used by Theseus in the Minotaur maze. The rules are three: first unroll a ball of string behind you, second mark each visited intersection and passage, third retrace your steps when no unvisited options are available. The main idea in depth-first search is to mimic the maze exploration. There are two main steps: first mark the current vertex `v` as visited, second *recursively* visit all unmarked vertices adjacent to `v`. The **recursion** is the engine of the algorithm.
@@ -33,7 +33,13 @@ def depth_first_search(v):
 The following is a representation of the trace of the algorithm on a given graph:
 
 <p align="center">
-<img src="./images/dfs_trace.png" width="300">
+<img src="./images/dfs_trace.png" width="250">
+</p>
+
+The result of calling the algorithm from the vertex 0 of a graph divided in three groups is the following:
+
+<p align="center">
+<img src="./images/dfs_result.png" width="350">
 </p>
 
 Methods
