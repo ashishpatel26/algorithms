@@ -28,11 +28,11 @@ Collection of algorithms and data structures implemented in Python and C++. For 
 
 12. **Hash tables**: (data structure) using an hash function that maps any integer into a subset it is possible to store a large number of values into a limited number of bins [[link]](./hash-functions)
 
-13. **Graph**: (data structure) the graph data structure is very important and it can be implemented in three ways. The first way is using a matrix of size V*V where each value identifies a connection between two vertices. The third way is using an adjacency-list, meaning a list of list where for each vertex there is associated a list of neighbours. [link]
+13. **Graph**: (data structure) the graph data structure is very important and it can be implemented in three ways. The first way is using a matrix of size V*V where each value identifies a connection between two vertices. The third way is using an adjacency-list, meaning a list of list where for each vertex there is associated a list of neighbours. [[link]](./graph)
 
-14. **Depth-First Search**: (search algorithm) using a depth search it is possible to look for path and vertex in a graph [[link]](./dept-first-search)
+14. **Depth-First Search**: (search algorithm) using a depth search it is possible to look for path and vertex in a graph [[link]](./depth-first-search)
 
-15. **Breadth-First Search**: (search algorithm) using a breadth search it is possible to look for path and vertex in a graph. It is used to find the shortest path between two nodes. [[link]](./dept-first-search)
+15. **Breadth-First Search**: (search algorithm) using a breadth search it is possible to look for path and vertex in a graph. It is used to find the shortest path between two nodes. [[link]](./breadth-first-search)
 
 
 
