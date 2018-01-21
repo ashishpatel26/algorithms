@@ -2,7 +2,7 @@
 The [breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search) is an algorithm for traversing or searching tree or graph data structures. It starts at a specific node called **search key** and explores the neighbor nodes first, before moving to the next level neighbours. Differently from the depth-first search this algorithm is **not recursive**, instead it uses a queue to store all the adjacent node and mark them. Taking in consideration the same maze example used in previous module, we can think of breadth-first search as a group of searchers exploring by fanning out in all directions, each unrolling his or her own ball of string. When more than one passage needs to be explored, we imagine that the searchers split up to expore all of them; when two groups of searchers meet up, they join forces (using the ball of string held by the one getting there first).
 
 <p align="center">
-<img src="./images/bfs_maze.png" width="250">
+<img src="./images/bfs_maze.png" width="200">
 </p>
 
 The idea is to add the unvisited node into a FIFO queue and mark it as visited. The it is necessary to pop an element from the queue, look to all the neighbours and add the unvisited to the queue and mark them. Repeat this process untill all the nodes are marked. The algorithm solves the problem of finding the **shortest path** between the starting node and all the other nodes. The time complexity needed for finding the shortest path is proportional to E+V.
@@ -34,7 +34,7 @@ def breadth_first_search(s):
 The following is a representation of the trace of the algorithm on a given graph:
 
 <p align="center">
-<img src="./images/bfs_trace.png" width="300">
+<img src="./images/bfs_trace.png" width="350">
 </p>
 
 The result of calling the algorithm from the vertex 0 of a graph is the following:

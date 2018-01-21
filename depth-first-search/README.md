@@ -9,6 +9,8 @@ The [Trémaux's algorithm](https://en.wikipedia.org/wiki/Maze_solving_algorithm)
 
 The **time complexity** for marking all the vertices connected to `s` in time proportional to the sum of their degrees. The degree is the number of adjacent nodes of a vertex. The time to find a path from `s` to `v` is proportional to its length.
 
+It is also possible to use depth-first search to efficiently find the **connected components** of a graph. As discussed in the graph module, a graph is **connected** if there is a path from every vertex to every other vertex in the graph. A graph that is **not connected** consists of a set of **connected components**, which are maximal connected subgraphs.
+
 
 Implementation
 ---------------
@@ -42,6 +44,22 @@ The result of calling the algorithm from the vertex 0 of a graph divided in thre
 <img src="./images/dfs_result.png" width="550">
 </p>
 
+It is possible to used depth-first search to find the **connected components** of a graph. In this case we keep a connected component counter `cc_counter` and a list `cc_list[]`. We iterate through the list of vertex stored in `vertex_list[]`, and we run the depth-search if the node is unmarked. When the search finishes we increment the `cc_counter` and we search the next unmarked node in `vertex_list[]`. To each unmarked vertex encountered along the way, we assign the current index given by the `cc_counter`. The main loop is as follows:
+
+```Python
+for v in range(V):
+    if marked_list[v] == False:
+        cc_list[v] = cc_counter #assign the ID to the starting node
+        depth_first_search(v) #depth search from the starting node
+        cc_counter += 1 #increment the ID counter
+```
+
+A single line of code must be added at the end of the the depth-search function, in order to assign the component id to the vertex:
+
+```Python
+cc_list[v_adj] = cc_counter
+```
+
 Methods
 --------
 
@@ -57,7 +75,9 @@ Applications
 Quiz
 -----
 
+- Find if a given graph is bipartite. Bipartite graph are define as such graph in which each edge connects nodes assigned to two different colours (e.g. black and red).
 
+-Euler tour. Find if there is a cycle that uses each edge exactly one. Based on the [Euler solution](https://en.wikipedia.org/wiki/Eulerian_path) to the [seven Bridges of Königsberg](https://en.wikipedia.org/wiki/Seven_Bridges_of_K%C3%B6nigsberg) problem.
 
 
 Material
