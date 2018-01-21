@@ -39,7 +39,7 @@ The following is a representation of the trace of the algorithm on a given graph
 The result of calling the algorithm from the vertex 0 of a graph divided in three groups is the following:
 
 <p align="center">
-<img src="./images/dfs_result.png" width="350">
+<img src="./images/dfs_result.png" width="550">
 </p>
 
 Methods
@@ -51,7 +51,8 @@ Methods
 Applications
 ------------
 
-1. 
+1. financial transactions between partners
+2. hyperlink classification of complex networks
 
 Quiz
 -----
