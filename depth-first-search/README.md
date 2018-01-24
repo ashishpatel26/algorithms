@@ -57,7 +57,11 @@ for v in range(V):
 A single line of code must be added at the end of the the depth-search function, in order to assign the component id to the vertex:
 
 ```Python
-cc_list[v_adj] = cc_counter
+if marked_list[v_adj] == False:
+    edgeto_list[v_adj] = v
+    depth_first_search(v_adj) #iterative call
+    #Additional code for connected components
+    cc_list[v_adj] = cc_counter
 ```
 
 Methods
@@ -77,7 +81,7 @@ Quiz
 
 - Find if a given graph is bipartite. Bipartite graph are define as such graph in which each edge connects nodes assigned to two different colours (e.g. black and red).
 
--Euler tour. Find if there is a cycle that uses each edge exactly one. Based on the [Euler solution](https://en.wikipedia.org/wiki/Eulerian_path) to the [seven Bridges of Königsberg](https://en.wikipedia.org/wiki/Seven_Bridges_of_K%C3%B6nigsberg) problem.
+- Euler tour. Find if there is a cycle that uses each edge exactly one. Based on the [Euler solution](https://en.wikipedia.org/wiki/Eulerian_path) to the [seven Bridges of Königsberg](https://en.wikipedia.org/wiki/Seven_Bridges_of_K%C3%B6nigsberg) problem.
 
 
 Material
