@@ -34,7 +34,7 @@ Collection of algorithms and data structures implemented in Python and C++. For 
 
 15. **Breadth-First Search**: (search algorithm) using a breadth search it is possible to look for path and vertex in a graph. It is used to find the shortest path between two nodes. [[link]](./breadth-first-search)
 
-
+16. **Digraph**: (data structure) a directed graph or digraph has directed edges. The depth-first and breadth-first algorithms still work. However finding strong connected components requires a slightly more complex algorithm. [[link]](./digraph)
 
 Official requirements (of different companies) for passing coding interview:
 
