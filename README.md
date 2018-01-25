@@ -36,6 +36,8 @@ Collection of algorithms and data structures implemented in Python and C++. For 
 
 16. **Digraph**: (data structure) a directed graph or digraph has directed edges. The depth-first and breadth-first algorithms still work. However finding strong connected components requires a slightly more complex algorithm. [[link]](./digraph)
 
+17. **Minimum Spanning Trees**: (data structure and search algorithm) sometimes it is necessary to find the minimum set of edges connecting all the nodes, where to each edge it is associated a weigh. The minimum spanning tree correspond to the tree having the edges with lowest weight connecting all the nodes. [[link]](./minimum-spanning-trees)
+
 Official requirements (of different companies) for passing coding interview:
 
 - Google [[readme]](./interview/google.md)
