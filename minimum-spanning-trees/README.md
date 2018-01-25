@@ -2,7 +2,7 @@
 A [minimum spanning tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) or minimum weight spanning tree is a subset of the edges of a connected, edge-weighted (un)directed graph that connects all the vertices together, without any cycles and with the minimum possible total edge weight. 
 
 <p align="center">
-<img src="./images/mst_tree_example.png" width="500">
+<img src="./images/mst_tree_example.png" width="300">
 </p>
 
 
@@ -48,7 +48,7 @@ while(len(priority_queue) > 0):
 The time complexity of the algorithm is *E log(E)* and it is easy to understand why looking to a table with the complexity required by any passage:
 
 <p align="center">
-<img src="./images/mst_kruskal_complexity.png" width="500">
+<img src="./images/mst_kruskal_complexity.png" width="300">
 </p>
 
 It is possible to see that the larger complexity is the *log(E)* required by the delete-min operation in the priority-queue, and this operation must be repeated *E* times leading to *E log(E)* total complexity.
