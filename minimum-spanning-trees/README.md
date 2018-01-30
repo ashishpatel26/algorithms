@@ -54,7 +54,66 @@ The time complexity of the algorithm is *E log(E)* and it is easy to understand 
 It is possible to see that the larger complexity is the *log(E)* required by the delete-min operation in the priority-queue, and this operation must be repeated *E* times leading to *E log(E)* total complexity.
 
 
-3. **Prim's algorithm**: 
+3. **Prim's algorithm**: this is another algorithm for evaluating the minimum spanning tree. To use the algorithm we need a priority queue data structure, that is used to store temporary edges. Using the priority queue the edges are automatically sorted from minimum to maximum weight. The idea is to add to the queue only the edges having exactly **one endpoint** in the minimum spanning tree that we are growing. This principle is very important and is the core of the algorithm.
+
+We start the search from node 0 of the given graph *G*. We consider all the edges that connect 0 to the neighbours and we select the one having minimum weight (in this case 0-7). This edge is added to *T*:
+
+<p align="center">
+<img src="./images/mst_prim_algorithm_0.png" width="300">
+</p>
+
+The next step consists in considering the connections from the node 7 to the neighbours. All the edges from 7 are added to the priority queue.
+Then it is asked to return the minimum weight edge. In this case the edge with minimum weight is the one going to node 1:
+
+<p align="center">
+<img src="./images/mst_prim_algorithm_7.png" width="300">
+</p>
+
+The edge 1-7 is added to the minimum spanning tree. The search continue pushing in the priority queue all the neighbours edges of node 1:
+
+<p align="center">
+<img src="./images/mst_prim_algorithm_1.png" width="300">
+</p>
+
+The next step is particular, because we have to consider the edge with minimum weight in the queue. This edge is 0-2 meaning that it is necessary to turn our attention to node 2 that has not been marked yet. The edge 0-2 is added to the minimum spanning tree:
+
+<p align="center">
+<img src="./images/mst_prim_algorithm_2.png" width="300">
+</p>
+
+When we marked node 2 some edges became obsolete and they could be removed from the queue because the do not respect the endpoint principia. However here we are implementing a **lazy** version of the algorithm and we keep these connections in the queue (it does not affect the algorithm). The algorithm continue until the last node (in our example is 6) is added to the minimum spanning tree.
+
+<p align="center">
+<img src="./images/mst_prim_algorithm_6.png" width="300">
+</p>
+
+For the last node some connections are already in the queue (solid red) while others have been added (6-4, dashed red). It is important to notice that before arriving to the next minimum weight (6-2) it will be necessary to remove from the priority queue some obsolete edges (1-2, 4-7, 0-4).
+
+<p align="center">
+<img src="./images/mst_prim_algorithm_end.png" width="300">
+</p>
+
+The following is a python-like pseudocode for the implementation of the lazy Prim's algorithm:
+
+```python
+marked_list = [False, False, False, ...] #list of marked nodes
+mst_list = [] #minimum spanning tree list, will contain the edges
+priority_queue_list = dequeue() #the queue for the temporary edges
+
+#The node 0 edges are added to the queue
+add_to_queue(Node 0, priority_queue_list)
+
+#Main loop
+while(len(priority_queue_list)>0):
+    #pop one edge from the queue
+    (v, w) = priority_queue_list.popleft() #Note: it is possible to use the Edge() class instead of tuple
+    #Going forward to the next step only if at list one node is not endpoint
+    if not marked_list[v] and marked_list[w]:
+        mst_list.append(e) #the edge can be added to the list
+        #Check which one of the two nodes is not-marked and add its neighbours
+        if marked_list[v]: add_to_queue(v, priority_queue_list)
+        if marked_list[w]: add_to_queue(w, priority_queue_list)
+```
 
 Methods
 --------
