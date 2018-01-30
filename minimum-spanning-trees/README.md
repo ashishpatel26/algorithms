@@ -54,9 +54,7 @@ The time complexity of the algorithm is *E log(E)* and it is easy to understand 
 It is possible to see that the larger complexity is the *log(E)* required by the delete-min operation in the priority-queue, and this operation must be repeated *E* times leading to *E log(E)* total complexity.
 
 
-3. **Prim's algorithm**: this is another algorithm for evaluating the minimum spanning tree. To use the algorithm we need a priority queue data structure, that is used to store temporary edges. Using the priority queue the edges are automatically sorted from minimum to maximum weight. The idea is to add to the queue only the edges having exactly **one endpoint** in the minimum spanning tree that we are growing. This principle is very important and is the core of the algorithm.
-
-We start the search from node 0 of the given graph *G*. We consider all the edges that connect 0 to the neighbours and we select the one having minimum weight (in this case 0-7). This edge is added to *T*:
+3. **Prim's algorithm**: this is another algorithm for evaluating the minimum spanning tree. To use the algorithm we need a priority queue data structure, that is used to store temporary edges. Using the priority queue the edges are automatically sorted from minimum to maximum weight. The idea is to add to the queue only the edges having exactly **one endpoint** in the minimum spanning tree that we are growing. This principle is very important and is the core of the algorithm. We start the search from node 0 of the given graph *G*. We consider all the edges that connect 0 to the neighbours and we select the one having minimum weight (in this case 0-7). This edge is added to *T*:
 
 <p align="center">
 <img src="./images/mst_prim_algorithm_0.png" width="350">
@@ -115,6 +113,8 @@ while(len(priority_queue_list)>0):
         if marked_list[v]: add_to_queue(v, priority_queue_list)
         if marked_list[w]: add_to_queue(w, priority_queue_list)
 ```
+
+The *time complexity* of the lazy version of Prim's algorithm is in the worst case *E log(E)* because it is necessary to visit all the edges (E) and the binary heap (priority queue) associate to each one of them. There is a more efficient solution proposed by **Eager**
 
 Methods
 --------
