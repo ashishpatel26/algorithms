@@ -1,5 +1,11 @@
 
-algorithms
+Introduction
+-------------
+
+1. **Object-oriented programming** [[link]](./oo-programming)
+
+
+Algorithms
 -----------
 
 Collection of algorithms and data structures implemented in Python and C++. For an optimal learning experience it is recommended to study the material in the following order:
